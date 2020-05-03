@@ -1,12 +1,38 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.dlcreation</groupId>
-  <artifactId>mhp</artifactId>
-  <version>1.0</version>
-  <packaging>pom</packaging>
-  <name>My Home Page</name>
-  <description>A web application to record my whole life.</description>
-  <modules>
-  	<module>mhp-clientPortal</module>
-  </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.dlcreation</groupId>
+	<artifactId>mhp</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+	<name>My Home Page</name>
+	<description>A web application to record my whole life.</description>
+	<modules>
+		<module>mhp-clientPortal</module>
+	</modules>
+	<properties>
+		<slf4j.version>1.7.12</slf4j.version>
+		<servlet.version>3.1.0</servlet.version>
+		<maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
+		<maven-resources-plugin.version>2.7</maven-resources-plugin.version>
+		<spring.version>5.2.5.RELEASE</spring.version>
+		<maven-ear-plugin.version>2.10.1</maven-ear-plugin.version>
+		<contextPath.adminPortal>/mlpAdm</contextPath.adminPortal>
+		<contextPath.clientPortal>/mlp</contextPath.clientPortal>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<inherited>true</inherited>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
